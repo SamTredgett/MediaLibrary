@@ -10,15 +10,15 @@ class Film {
         RunTime = runTime;
     }
 
-    private string GetTitle(){
+    public string GetTitle(){
         return this.Title;
     }
 
-    private string GetDirectory(){
+    public string GetDirector(){
         return this.Director;
     }
 
-    private double getRunTime(){
+    public double GetRunTime(){
         return this.RunTime;
     }
 
