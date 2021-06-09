@@ -3,7 +3,9 @@ namespace MediaLibrary {
     public string Title;
     public string ArtistName;
 
-    public Song(){
+    public Song(string title, string artistName){
+        ArtistName = artistName;
+        Title = title;
     } 
 
     public string GetTitle(){
