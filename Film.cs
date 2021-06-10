@@ -28,7 +28,12 @@ class Film {
         return this.RunTime;
     }
     public string GetDisplayText(){
+        if(this.OnLoan()){
+            return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
+        }
+        else{
         return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
+        }
     }
 
     public bool OnLoan(){
@@ -39,7 +44,7 @@ class Film {
         if (!this.OnLoan()) {
             this.Loanee = loanee;
             this.LoanStatus = true;
-            Console.WriteLine($"{this.GetDisplayText()} has been loaned to {loanee}");
+            Console.WriteLine(this.GetDisplayText());
         }
         else{
             Console.WriteLine($"Unable to loan this film to {loanee}, {this.LoanedBy()}");
@@ -58,7 +63,7 @@ class Film {
     }
 
     public string LoanedBy(){
-        return $"This film is currently on loan by {Loanee}";
+        return $"This film is currently on loan to {Loanee}";
     }
 }
 }

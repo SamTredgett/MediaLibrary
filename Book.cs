@@ -20,7 +20,12 @@ namespace MediaLibrary {
         return this.Author;
     }
     public string GetDisplayText(){
+        if(this.OnLoan()){
+            return $"Book: {this.GetTitle()} by {this.GetAuthor()} (Currently on loan to {this.Loanee})";
+        }
+        else{
         return $"Book: {this.GetTitle()} by {this.GetAuthor()}";
+        }
     }
 
     public bool OnLoan(){
@@ -31,7 +36,7 @@ namespace MediaLibrary {
         if (!this.OnLoan()) {
             this.Loanee = loanee;
             this.LoanStatus = true;
-            Console.WriteLine($"{this.GetDisplayText()} has been loaned to {loanee}");
+            Console.WriteLine(this.GetDisplayText());
         }
         else{
             Console.WriteLine($"Unable to loan this book to {loanee}, {this.LoanedBy()}");
@@ -50,7 +55,7 @@ namespace MediaLibrary {
     }
 
     public string LoanedBy(){
-        return $"This book is currently on loan by {Loanee}";
+        return $"This book is currently on loan to {Loanee}";
     }
 
 }

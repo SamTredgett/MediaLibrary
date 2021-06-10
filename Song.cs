@@ -19,7 +19,12 @@ namespace MediaLibrary {
     }
 
     public string GetDisplayText(){
-        return $"Song: {this.GetTitle()} by {this.GetArtistName()}";
+        if(this.OnLoan()){
+            return $"Song: {this.GetTitle()} by {this.GetArtistName()} (currently on loan by {this.Loanee})";
+        }
+        else{
+            return $"Song: {this.GetTitle()} by {this.GetArtistName()}";
+        }
     }
 
     public bool OnLoan(){
@@ -30,7 +35,7 @@ namespace MediaLibrary {
         if (!this.OnLoan()) {
             this.Loanee = loanee;
             this.LoanStatus = true;
-            Console.WriteLine($"{this.GetDisplayText()} has been loaned to {loanee}");
+            Console.WriteLine(this.GetDisplayText());
         }
         else{
             Console.WriteLine($"Unable to loan this record to {loanee}, {this.LoanedBy()}");
@@ -49,7 +54,7 @@ namespace MediaLibrary {
     }
 
     public string LoanedBy(){
-        return $"This record is currently on loan by {Loanee}";
+        return $"This record is currently on loan to {Loanee}";
     }
 }
 }
