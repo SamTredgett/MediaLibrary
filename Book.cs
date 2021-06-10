@@ -1,15 +1,14 @@
 using System;
 namespace MediaLibrary {
-    class Book {
-    public string Title;
+    class Book : MediaType {
+
     public string Author;
     public bool LoanStatus;
 
     public string Loanee;
 
-    public Book(string title, string author){
+    public Book(string title, string author) : base(title){
         Author = author;
-        Title = title;
         LoanStatus = false;
     } 
 

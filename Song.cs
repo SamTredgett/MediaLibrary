@@ -1,14 +1,14 @@
 using System;
 namespace MediaLibrary {
-    class Song {
-    public string Title;
+    class Song  : MediaType {
+
     public string ArtistName;
     public bool LoanStatus;
 
     public string Loanee;
-    public Song(string title, string artistName){
+    public Song(string title, string artistName) : base(title){
         ArtistName = artistName;
-        Title = title;
+
     } 
 
     public string GetTitle(){

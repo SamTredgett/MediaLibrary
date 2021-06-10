@@ -1,7 +1,7 @@
 using System;
 namespace MediaLibrary{
-class Film {
-    private string Title;
+class Film : MediaType {
+
     private string Director;
     private double RunTime;
 
@@ -9,8 +9,7 @@ class Film {
     public bool LoanStatus;
 
     public string Loanee;
-    public Film(string title, string director, double runTime){
-        Title = title;
+    public Film(string title, string director, double runTime) : base(title){
         Director = director;
         RunTime = runTime;
         LoanStatus = false;
