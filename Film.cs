@@ -21,6 +21,9 @@ class Film {
     public double GetRunTime(){
         return this.RunTime;
     }
+    public string GetDisplayText(){
+        return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours.";
+    }
 
 }
 }

@@ -14,5 +14,9 @@ namespace MediaLibrary {
     public string GetArtistName(){
         return this.ArtistName;
     }
+
+    public string GetDisplayText(){
+        return $"Song: {this.GetTitle()} by {this.GetArtistName()}.";
+    }
 }
 }

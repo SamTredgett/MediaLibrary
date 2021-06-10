@@ -14,5 +14,8 @@ namespace MediaLibrary {
     public string GetAuthor(){
         return this.Author;
     }
+    public string GetDisplayText(){
+        return $"Book: {this.GetTitle()} by {this.GetAuthor()}.";
+    }
 }
 }
