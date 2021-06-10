@@ -15,11 +15,11 @@ namespace MediaLibrary {
         return this.Author;
     }
     public string GetDisplayText(){
-        if(!this.LoanStatus){
+        if(this.LoanStatus){
             return $"Book: {this.GetTitle()} by {this.GetAuthor()} (Currently on loan to {this.Loanee})";
         }
         else{
-        return $"Book: {this.GetTitle()} by {this.GetAuthor()}";
+            return $"Book: {this.GetTitle()} by {this.GetAuthor()}";
         }
     }
 }

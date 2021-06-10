@@ -8,7 +8,7 @@ namespace MediaLibrary
         {
             Console.WriteLine("Hello World! I'm a cruddy Media Library!\n");
             var song =  new Song("Yesterday", "The Beatles"); 
-            //Console.WriteLine($"The next song being played is:\t\t{song.GetTitle()} - {song.GetArtistName()}");
+            Console.WriteLine($"The next song being played is:\t\t{song.GetTitle()} - {song.GetArtistName()}");
             Console.WriteLine(song.GetDisplayText());
 
             // ###################################################################################################
@@ -29,6 +29,14 @@ namespace MediaLibrary
             song.Loan("Sophie");
             song.Return();
 
+
+            book.Loan("Sam");
+            film.Loan("Sam");
+            song.Loan("Sam");
+            // Running some tests to fix the boolean logic in the GetDisplayText method
+            Console.WriteLine($"\nAnd tonight we will be watching:\t{film.GetDisplayText()}");
+            Console.WriteLine($"\nLater tonight we'll be hearing a reading from {book.GetDisplayText()}");
+            Console.WriteLine($"The next song being played is:\t\t{song.GetTitle()} - {song.GetArtistName()}");
         }
     }
 }
