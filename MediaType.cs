@@ -9,6 +9,9 @@ namespace MediaLibrary
         protected string Loanee;
 
         public MediaType(string title){
+            if(string.IsNullOrEmpty(title)){
+                throw new Exception("A MediaType must have a title.");
+            }
             Title = title;
             LoanStatus = false;
         }
