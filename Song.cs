@@ -3,7 +3,7 @@ namespace MediaLibrary {
     class Song  : MediaType 
     {
 
-        public string ArtistName;
+        public string ArtistName {get; private set;}
 
         public Song(string title, string artistName) : base(title){
             ArtistName = artistName;

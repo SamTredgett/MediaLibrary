@@ -4,9 +4,9 @@ namespace MediaLibrary
 {
     class MediaType 
     {
-        public string Title;
-        protected bool LoanStatus;
-        protected string Loanee;
+        public string Title{ get; private set;  } = "";
+        public bool LoanStatus{ get; set;} = false;
+        protected string Loanee{get; private set;} = "";
 
         public MediaType(string title){
             if(string.IsNullOrEmpty(title)){

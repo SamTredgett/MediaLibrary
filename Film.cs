@@ -2,8 +2,8 @@ using System;
 namespace MediaLibrary{
 class Film : MediaType {
 
-        private string Director;
-        private double RunTime;
+        public string Director{get; private set;}
+        public double RunTime {get; private set;}
 
         public Film(string title, string director, double runTime) : base(title){
             Director = director;
