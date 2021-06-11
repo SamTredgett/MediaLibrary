@@ -7,27 +7,26 @@ namespace MediaLibrary
         static void Main(string[] args)
         {
             try {
-                
-                MediaType[] MyMedia = {
+                // Generate a MediaLibrary object 
+                var items = new MediaLibrary(new MediaType[]{
                     new Song("Yesterday", "The Beatles"), 
                     new Book("Beyond Good & Evil", "Friedrich Nietzsche"), 
                     new Film("The Dark Knight", "Christopher Nolan", 2.00)
-                    };
-
-                var items = new MediaLibrary(MyMedia);
-
-
-                Console.WriteLine("Hello World! I'm a cruddy Media Library!\n");
-                Console.WriteLine($"The next song being played is:\t\t{Display(items.GetItemAt(0))}");
-                // Console.WriteLine(Display(MyMedia[0]));
-
-                // ###################################################################################################
-                Console.WriteLine($"\nAnd tonight we will be watching:\t{Display(items.GetItemAt(2))}");
-                Console.WriteLine($"\nLater tonight we'll be hearing a reading from {Display(items.GetItemAt(1))}");
-
-                // Creating array of MediaType Objects
+                    });
                 
-                Console.WriteLine(items.GetItemAt(1).Title);
+                // Testing how to loan out items now
+                items.GetItemAt(0).Loan("Sam");
+                Display(items.GetItemAt(0));
+                // All working nominally with once loaned.
+
+                //testing the return after using the Return() method
+                items.GetItemAt(0).Return();
+                Display(items.GetItemAt(0));
+                // All working nominally
+
+
+                // Forcing an error on the GetItemAt(index) function to see if the error handling works
+                items.GetItemAt(5);
 
 
                 // book.Loan("Sam");
@@ -56,9 +55,9 @@ namespace MediaLibrary
                 // var film2  = new Film("", "Hans Zimmer", 2.00);
                 // Console.WriteLine("test code");
 
-                Console.WriteLine(DetectMediaType(items.GetItemAt(0)));
-                Console.WriteLine(DetectMediaType(items.GetItemAt(1)));
-                Console.WriteLine(DetectMediaType(items.GetItemAt(2)));
+                DetectMediaType(items.GetItemAt(0));
+                DetectMediaType(items.GetItemAt(1));
+                DetectMediaType(items.GetItemAt(2));
 
                 
             }
@@ -66,32 +65,38 @@ namespace MediaLibrary
                 Console.WriteLine("Exception: {0}", ex.Message);
             }
         }
-    public static string Display(MediaType item){
-            
-            if(item is Book ){
-                return ((Book)item).GetDisplayText();
-            }
-            else if(item is Film){
-                return ((Film)item).GetDisplayText();
-            }
-            else if(item is Song){
-                return ((Song)item).GetDisplayText();
+    public static void Display(MediaType item){
+            if (item == null) {
+                return;
             }
             else{
-                throw new Exception("Unexpected Media subtype encountered.");
+                    if(item is Book ){
+                        Console.WriteLine(((Book)item).GetDisplayText());
+                    }
+                    else if(item is Film){
+                        Console.WriteLine(((Film)item).GetDisplayText());                    
+                    }
+                    else if(item is Song){
+                        Console.WriteLine(((Song)item).GetDisplayText());
+                    }
+                    else{
+                        throw new Exception("Unexpected Media subtype encountered.");
+                    } 
             }
-
         }
-        public static string DetectMediaType(MediaType item){
-            
+        public static void DetectMediaType(MediaType item){
+            if (item ==null)
+                {
+                    return;
+                }           
             if(item is Book ){
-                return $"{item.Title} is a Book!";
+                Console.WriteLine($"{item.Title} is a Book!");
             }
             else if(item is Film){
-                return $"{item.Title} is a Film!";
+                Console.WriteLine($"{item.Title} is a Film!");
             }
             else if(item is Song){
-                return $"{item.Title} is a Song!";
+                Console.WriteLine($"{item.Title} is a Song!");
             }
             else{
                 throw new Exception("Unexpected Media subtype encountered.");

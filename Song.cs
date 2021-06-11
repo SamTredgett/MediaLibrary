@@ -18,7 +18,7 @@ namespace MediaLibrary {
 
         public string GetDisplayText(){
             if(this.LoanStatus){
-                return $"{this.GetTitle()} - {this.GetArtistName()} (currently on loan by {this.Loanee})";
+                return $"{this.GetTitle()} - {this.GetArtistName()} (currently on loan to {this.Loanee})";
             }
             else{
                 return $"{this.GetTitle()} - {this.GetArtistName()}";
