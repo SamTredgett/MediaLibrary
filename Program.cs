@@ -14,17 +14,20 @@ namespace MediaLibrary
                     new Film("The Dark Knight", "Christopher Nolan", 2.00)
                     };
 
+                var items = new MediaLibrary(MyMedia);
+
+
                 Console.WriteLine("Hello World! I'm a cruddy Media Library!\n");
-                Console.WriteLine($"The next song being played is:\t\t{Display(MyMedia[0])}");
+                Console.WriteLine($"The next song being played is:\t\t{Display(items.GetItemAt(0))}");
                 // Console.WriteLine(Display(MyMedia[0]));
 
                 // ###################################################################################################
-                Console.WriteLine($"\nAnd tonight we will be watching:\t{Display(MyMedia[2])}");
-                Console.WriteLine($"\nLater tonight we'll be hearing a reading from {Display(MyMedia[1])}");
+                Console.WriteLine($"\nAnd tonight we will be watching:\t{Display(items.GetItemAt(2))}");
+                Console.WriteLine($"\nLater tonight we'll be hearing a reading from {Display(items.GetItemAt(1))}");
 
                 // Creating array of MediaType Objects
                 
-                Console.WriteLine(MyMedia[1].Title);
+                Console.WriteLine(items.GetItemAt(1).Title);
 
 
                 // book.Loan("Sam");
@@ -53,9 +56,9 @@ namespace MediaLibrary
                 // var film2  = new Film("", "Hans Zimmer", 2.00);
                 // Console.WriteLine("test code");
 
-                Console.WriteLine(DetectMediaType(MyMedia[0]));
-                Console.WriteLine(DetectMediaType(MyMedia[1]));
-                Console.WriteLine(DetectMediaType(MyMedia[2]));
+                Console.WriteLine(DetectMediaType(items.GetItemAt(0)));
+                Console.WriteLine(DetectMediaType(items.GetItemAt(1)));
+                Console.WriteLine(DetectMediaType(items.GetItemAt(2)));
 
                 
             }
