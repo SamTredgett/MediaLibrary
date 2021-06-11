@@ -2,7 +2,8 @@ using System;
 
 namespace MediaLibrary
 {
-    class MediaType {
+    class MediaType 
+    {
         protected string Title;
         protected bool LoanStatus;
         protected string Loanee;
@@ -23,26 +24,20 @@ namespace MediaLibrary
             }
         }
 
-    public void Return(){
-        if (!this.LoanStatus){
-            Console.WriteLine("This isn't on loan!");
+        public void Return(){
+            if (!this.LoanStatus){
+                Console.WriteLine("This isn't on loan!");
+            }
+            else {
+                this.LoanStatus = false;
+                this.Loanee = null;
+                Console.WriteLine("Thanks you for returning me!");
+            }
         }
-        else {
-            this.LoanStatus = false;
-            this.Loanee = null;
-            Console.WriteLine("Thanks you for returning me!");
+
+        public string LoanedBy(){
+            return $"this is currently on loan to {Loanee}";
         }
-    }
-
-    public string LoanedBy(){
-        return $"this is currently on loan to {Loanee}";
-    }
 
     }
-
-
-
-
-
-
 }

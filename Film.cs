@@ -2,32 +2,32 @@ using System;
 namespace MediaLibrary{
 class Film : MediaType {
 
-    private string Director;
-    private double RunTime;
+        private string Director;
+        private double RunTime;
 
-    public Film(string title, string director, double runTime) : base(title){
-        Director = director;
-        RunTime = runTime;
-    }
-
-    public string GetTitle(){
-        return this.Title;
-    }
-
-    public string GetDirector(){
-        return this.Director;
-    }
-
-    public double GetRunTime(){
-        return this.RunTime;
-    }
-    public string GetDisplayText(){
-        if(this.LoanStatus){
-            return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
+        public Film(string title, string director, double runTime) : base(title){
+            Director = director;
+            RunTime = runTime;
         }
-        else{
-            return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
+
+        public string GetTitle(){
+            return this.Title;
+        }
+
+        public string GetDirector(){
+            return this.Director;
+        }
+
+        public double GetRunTime(){
+            return this.RunTime;
+        }
+        public string GetDisplayText(){
+            if(this.LoanStatus){
+                return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
+            }
+            else{
+                return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
+            }
         }
     }
-}
 }
