@@ -17,10 +17,10 @@ namespace MediaLibrary {
         }
         public string GetDisplayText(){
             if(this.LoanStatus){
-                return $"Book: {this.GetTitle()} by {this.GetAuthor()} (Currently on loan to {this.Loanee})";
+                return $"{this.GetTitle()} by {this.GetAuthor()} (Currently on loan to {this.Loanee})";
             }
             else{
-                return $"Book: {this.GetTitle()} by {this.GetAuthor()}";
+                return $"{this.GetTitle()} by {this.GetAuthor()}";
             }
         }
     }

@@ -23,10 +23,10 @@ class Film : MediaType {
         }
         public string GetDisplayText(){
             if(this.LoanStatus){
-                return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
+                return $"{this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
             }
             else{
-                return $"Film: {this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
+                return $"{this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
             }
         }
     }
