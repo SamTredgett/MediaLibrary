@@ -4,7 +4,7 @@ namespace MediaLibrary
 {
     class MediaType 
     {
-        protected string Title;
+        public string Title;
         protected bool LoanStatus;
         protected string Loanee;
 

@@ -37,6 +37,24 @@ namespace MediaLibrary
             Console.WriteLine($"\nAnd tonight we will be watching:\t{film.GetDisplayText()}");
             Console.WriteLine($"\nLater tonight we'll be hearing a reading from {book.GetDisplayText()}");
             Console.WriteLine($"The next song being played is:\t\t{song.GetTitle()} - {song.GetArtistName()}");
+
+
+            Console.WriteLine(DetectMediaType(song));
+            Console.WriteLine(DetectMediaType(film));
+            Console.WriteLine(DetectMediaType(book));
+        }
+
+        public static string DetectMediaType(MediaType item){
+            if(item is Book ){
+                return $"{item.Title} is a Book!";
+            }
+            else if(item is Film){
+                return $"{item.Title} is a Film!";
+            }
+            else{
+                return $"{item.Title} is a Song!";
+            }
+
         }
     }
 }
