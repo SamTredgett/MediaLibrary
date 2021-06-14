@@ -5,6 +5,13 @@ namespace MediaLibrary {
 
         public string ArtistName {get; private set;}
 
+        public string DisplayText { 
+            get
+            {
+                return $"Song: {this.ArtistName} - {this.Title} {OnLoanDisplayText}";
+            } 
+        }
+
         public Song(string title, string artistName) : base(title){
             ArtistName = artistName;
         } 
@@ -14,15 +21,6 @@ namespace MediaLibrary {
         }
         public string GetArtistName(){
             return this.ArtistName;
-        }
-
-        public string GetDisplayText(){
-            if(this.LoanStatus){
-                return $"{this.GetTitle()} - {this.GetArtistName()} (currently on loan to {this.Loanee})";
-            }
-            else{
-                return $"{this.GetTitle()} - {this.GetArtistName()}";
-            }
         }
     }
 }

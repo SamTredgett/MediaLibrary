@@ -5,6 +5,12 @@ class Film : MediaType {
         public string Director{get; private set;}
         public double RunTime {get; private set;}
 
+        public string DisplayText { 
+            get
+            {
+                return $"{this.Title} - {this.Director} with a runtime of {this.GetRunTime()} {OnLoanDisplayText}";
+            } 
+        }
         public Film(string title, string director, double runTime) : base(title){
             Director = director;
             RunTime = runTime;
@@ -20,14 +26,6 @@ class Film : MediaType {
 
         public double GetRunTime(){
             return this.RunTime;
-        }
-        public string GetDisplayText(){
-            if(this.LoanStatus){
-                return $"{this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours (Currently on Loan to {this.Loanee})";
-            }
-            else{
-                return $"{this.GetTitle()} by {this.GetDirector()} and it runs for {this.GetRunTime()} hours";
-            }
         }
     }
 }

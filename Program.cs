@@ -29,31 +29,27 @@ namespace MediaLibrary
                 items.GetItemAt(5);
 
 
-                // book.Loan("Sam");
-                // book.Loan("Sophie");
-                // book.Return();
+                items.GetItemAt(0).Loan("Sam");
+                items.GetItemAt(0).Loan("Sophie");
+                items.GetItemAt(0).Return();
 
-                // film.Loan("Sam");
-                // film.Loan("Sophie");
-                // film.Return();
+                items.GetItemAt(1).Loan("Sam");
+                items.GetItemAt(1).Loan("Sophie");
+                items.GetItemAt(1).Return();
 
-                // song.Loan("Sam");
-                // song.Loan("Sophie");
-                // song.Return();
+                items.GetItemAt(2).Loan("Sam");
+                items.GetItemAt(2).Loan("Sophie");
+                items.GetItemAt(2).Return();
 
 
-                // book.Loan("Sam");
-                // film.Loan("Sam");
-                // song.Loan("Sam");
-                // // Running some tests to fix the boolean logic in the GetDisplayText method
-                // Console.WriteLine($"\nAnd tonight we will be watching:\t{film.GetDisplayText()}");
-                // Console.WriteLine($"\nLater tonight we'll be hearing a reading from {book.GetDisplayText()}");
-                // Console.WriteLine($"The next song being played is:\t\t{song.GetTitle()} - {song.GetArtistName()}");
+                items.GetItemAt(0).Loan("Sam");
+                items.GetItemAt(1).Loan("Sam");
+                items.GetItemAt(2).Loan("Sam");
 
-                // Test code for the empty/null string exception made in MediaType constructor
-                // Console.WriteLine("test code");
-                // var film2  = new Film("", "Hans Zimmer", 2.00);
-                // Console.WriteLine("test code");
+                // Console.WriteLine($"\nAnd tonight we will be watching:\t{items.GetItemAt(0).DisplayText}");
+                // Console.WriteLine($"\nLater tonight we'll be hearing a reading from {book.Display()}");
+                // Console.WriteLine($"The next song being played is:\t\t{song.Display()}");
+
 
                 DetectMediaType(items.GetItemAt(0));
                 DetectMediaType(items.GetItemAt(1));
@@ -71,13 +67,13 @@ namespace MediaLibrary
             }
             else{
                     if(item is Book ){
-                        Console.WriteLine(((Book)item).GetDisplayText());
+                        Console.WriteLine(((Book)item).DisplayText);
                     }
                     else if(item is Film){
-                        Console.WriteLine(((Film)item).GetDisplayText());                    
+                        Console.WriteLine(((Film)item).DisplayText);                    
                     }
                     else if(item is Song){
-                        Console.WriteLine(((Song)item).GetDisplayText());
+                        Console.WriteLine(((Song)item).DisplayText);
                     }
                     else{
                         throw new Exception("Unexpected Media subtype encountered.");

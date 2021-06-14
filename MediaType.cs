@@ -8,6 +8,17 @@ namespace MediaLibrary
         public bool LoanStatus{ get; set;} = false;
         protected string Loanee{get; private set;} = "";
 
+        public string OnLoanDisplayText
+        {
+            get {
+                if(this.LoanStatus){
+                    return $"(currently on loan to {this.Loanee})";
+                }
+                else{
+                    return "";
+                }
+            }
+        }
         public MediaType(string title){
             if(string.IsNullOrEmpty(title)){
                 throw new Exception("A MediaType must have a title.");
