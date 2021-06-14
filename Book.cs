@@ -5,12 +5,9 @@ namespace MediaLibrary {
 
         public string Author {get; private set;}
 
-        public string DisplayText { 
-            get
-            {
-                return $"Book: {this.Title} - {this.Author} {OnLoanDisplayText}";
-            } 
-        }
+        public string DisplayText  => 
+                $"Book: {this.Title} - {this.Author} {OnLoanDisplayText}";
+
         public Book(string title, string author) : base(title){
             Author = author;
         } 

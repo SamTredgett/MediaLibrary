@@ -5,12 +5,8 @@ namespace MediaLibrary {
 
         public string ArtistName {get; private set;}
 
-        public string DisplayText { 
-            get
-            {
-                return $"Song: {this.ArtistName} - {this.Title} {OnLoanDisplayText}";
-            } 
-        }
+        public string DisplayText => 
+                $"Song: {this.ArtistName} - {this.Title} {OnLoanDisplayText}";
 
         public Song(string title, string artistName) : base(title){
             ArtistName = artistName;
