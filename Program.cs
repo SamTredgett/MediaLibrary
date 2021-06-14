@@ -46,6 +46,8 @@ namespace MediaLibrary
                 items.GetItemAt(1).Loan("Sam");
                 items.GetItemAt(2).Loan("Sam");
 
+
+                Console.WriteLine(items.NumberOfItems);
                 // Console.WriteLine($"\nAnd tonight we will be watching:\t{items.GetItemAt(0).DisplayText}");
                 // Console.WriteLine($"\nLater tonight we'll be hearing a reading from {book.Display()}");
                 // Console.WriteLine($"The next song being played is:\t\t{song.Display()}");
