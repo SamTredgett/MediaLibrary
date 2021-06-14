@@ -14,15 +14,7 @@ namespace MediaLibrary
                     new Film("The Dark Knight", "Christopher Nolan", 2.00)
                     });
                 
-                // Testing how to loan out items now
-                items.GetItemAt(0).Loan("Sam");
-                Display(items.GetItemAt(0));
-                // All working nominally with once loaned.
-
-                //testing the return after using the Return() method
-                items.GetItemAt(0).Return();
-                Display(items.GetItemAt(0));
-                // All working nominally
+                items.DisplayItems();
 
 
                 // Forcing an error on the GetItemAt(index) function to see if the error handling works
@@ -63,25 +55,7 @@ namespace MediaLibrary
                 Console.WriteLine("Exception: {0}", ex.Message);
             }
         }
-    public static void Display(MediaType item){
-            if (item == null) {
-                return;
-            }
-            else{
-                    if(item is Book ){
-                        Console.WriteLine(((Book)item).DisplayText);
-                    }
-                    else if(item is Film){
-                        Console.WriteLine(((Film)item).DisplayText);                    
-                    }
-                    else if(item is Song){
-                        Console.WriteLine(((Song)item).DisplayText);
-                    }
-                    else{
-                        throw new Exception("Unexpected Media subtype encountered.");
-                    } 
-            }
-        }
+   
         public static void DetectMediaType(MediaType item){
             if (item ==null)
                 {

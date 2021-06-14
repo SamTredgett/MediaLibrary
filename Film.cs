@@ -6,7 +6,7 @@ class Film : MediaType {
         public double RunTime {get; private set;}
 
         public string DisplayText => 
-                $"{this.Title} - {this.Director} with a runtime of {this.GetRunTime()} {OnLoanDisplayText}";
+                $"Film: {this.Title} - {this.Director} with a runtime of {this.GetRunTime()} hours {OnLoanDisplayText}";
 
         public Film(string title, string director, double runTime) : base(title){
             Director = director;
