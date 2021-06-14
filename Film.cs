@@ -13,14 +13,6 @@ class Film : MediaType {
             RunTime = runTime;
         }
 
-        public string GetTitle(){
-            return this.Title;
-        }
-
-        public string GetDirector(){
-            return this.Director;
-        }
-
         public double GetRunTime(){
             return this.RunTime;
         }

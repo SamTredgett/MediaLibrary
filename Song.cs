@@ -11,12 +11,5 @@ namespace MediaLibrary {
         public Song(string title, string artistName) : base(title){
             ArtistName = artistName;
         } 
-
-        public string GetTitle(){
-            return this.Title;
-        }
-        public string GetArtistName(){
-            return this.ArtistName;
-        }
     }
 }

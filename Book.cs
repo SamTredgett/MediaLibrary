@@ -11,13 +11,5 @@ namespace MediaLibrary {
         public Book(string title, string author) : base(title){
             Author = author;
         } 
-
-
-        public string GetTitle(){
-            return this.Title;
-        }
-        public string GetAuthor(){
-            return this.Author;
-        }
     }
 }
