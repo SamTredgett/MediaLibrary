@@ -17,6 +17,16 @@ namespace MediaLibrary
                 items.DisplayItems();
 
 
+                var testItem = items.FindItem("yesterday");
+                if(testItem != null){
+                    MediaLibrary.DisplayItem(testItem);
+                }
+                else{
+                    Console.WriteLine("Item not found!");
+                }
+                // testItem.Display();
+                DetectMediaType(testItem);
+                // Console.WriteLine(testItem.DisplayItem());
                 // Forcing an error on the GetItemAt(index) function to see if the error handling works
                 items.GetItemAt(5);
 

@@ -33,6 +33,16 @@ namespace MediaLibrary{
                     } 
             
          }}
+         public MediaType FindItem(string criteria){
+             MediaType itemToReturn = null;
+             foreach(var item in _items){
+                 if(item.Title.ToLower().Contains(criteria.ToLower())){
+                     itemToReturn = item;
+                     break;
+                 }
+             }
+             return itemToReturn;
+         }
 
         public MediaType GetItemAt(int index){
             return (index>this._items.Length) ? null : this._items[index];           
