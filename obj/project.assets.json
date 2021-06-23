@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/sam/.nuget/packages/": {}
+    "/home/sam/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/MediaLibrary.csproj",
+      "projectUniqueName": "/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/MediaLibrary.csproj",
       "projectName": "MediaLibrary",
-      "projectPath": "/Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/MediaLibrary.csproj",
-      "packagesPath": "/Users/sam/.nuget/packages/",
-      "outputPath": "/Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/obj/",
+      "projectPath": "/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/MediaLibrary.csproj",
+      "packagesPath": "/home/sam/.nuget/packages/",
+      "outputPath": "/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sam/.nuget/NuGet/NuGet.Config"
+        "/home/sam/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }

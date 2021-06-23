@@ -28,3 +28,19 @@
 /Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/bin/Debug/net5.0/ref/MediaLibrary.dll
 /Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/bin/Debug/net5.0/MediaLibrary.pdb
 /Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/obj/Debug/net5.0/MediaLibrary.genruntimeconfig.cache
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary.deps.json
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary.runtimeconfig.json
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary.runtimeconfig.dev.json
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary.dll
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/ref/MediaLibrary.dll
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/bin/Debug/net5.0/MediaLibrary.pdb
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.csproj.AssemblyReference.cache
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.AssemblyInfoInputs.cache
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.AssemblyInfo.cs
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.csproj.CoreCompileInputs.cache
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.dll
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/ref/MediaLibrary.dll
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.pdb
+/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/obj/Debug/net5.0/MediaLibrary.genruntimeconfig.cache

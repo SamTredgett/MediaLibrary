@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VIzZrIyWeZexFdxKYmEIdzzwSs1llohpyNYk41miegC2cAwGFYGh3iZEJ+9bfVtDoY8xXao+k0bQbx5ZzAPyLA==",
+  "dgSpecHash": "/8RXlpWWCuoyMzerHj8t+2zvA9Qc06SN4BcxBPVU4EVffNjbRr58TRJiRmNzIxUKgQI184L5/kd1wYnt1ZCExg==",
   "success": true,
-  "projectFilePath": "/Users/sam/Documents/Programming Practise/CSharp/CSharpPractise/ProjectEuler/MediaLibrary/MediaLibrary.csproj",
+  "projectFilePath": "/home/sam/Documents/dotnet/MediaLibrary/MediaLibrary/MediaLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
